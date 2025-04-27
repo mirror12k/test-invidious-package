@@ -2,6 +2,7 @@
 set -e
 
 echo "[i] generating trusted token..."
+docker pull quay.io/invidious/youtube-trusted-session-generator
 TRUSTED_TOKEN_TXT=$(docker run quay.io/invidious/youtube-trusted-session-generator)
 echo "[+] got: $TRUSTED_TOKEN_TXT"
 
