@@ -22,9 +22,9 @@ services:
         signature_server: inv_sig_helper:12999
         visitor_data: {visitor_data}
         po_token: {po_token}
-        external_port: 443
-        domain: {domain}
-        https_only: true
+        # external_port: 443
+        # domain: {domain}
+        # https_only: true
         # statistics_enabled: false
         hmac_key: "{my_hmac_key}"
         default_user_preferences:

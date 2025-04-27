@@ -4,6 +4,8 @@ user=$1
 container_name="$2"
 package_name="${3:-$2}"
 
+git pull
+
 # run docker cli within a limited environment so that the container can initialize itself safely
 docker run --privileged --name "$container_name-container" --rm \
     -v "$(pwd)/$package_name:/app:ro" \
