@@ -22,10 +22,12 @@ useradd "$1" && {
 	mkdir "/home/$1"
 	chown $1:$1 "/home/$1"
 
-	echo "[+] initializing log"
-	mkdir -p "$(dirname "$3")" && touch "$3"
-	chown $1:$1 "$3"
 } || echo "[-] user already exists"
+
+
+echo "[+] initializing log"
+mkdir -p "$(dirname "$3")" && touch "$3"
+chown $1:$1 "$3"
 
 echo "[+] starting daemon"
 su "$1" -c "nohup \"$DIRPATH/keepalive.sh\" \"$2\" < \"$4\" >> \"$3\" 2>&1 &"
