@@ -30,7 +30,7 @@ services:
         default_user_preferences:
           quality: dash
     healthcheck:
-      test: wget -nv --tries=1 --spider http://127.0.0.1:3000/api/v1/comments/mR3Smq_yBiA || exit 1
+      test: wget -nv --tries=1 --spider http://127.0.0.1:3000/api/v1/comments/Fdh1PH3ZdTQ || exit 1
       interval: 30s
       timeout: 5s
       retries: 2
